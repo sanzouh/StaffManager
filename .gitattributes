@@ -1,0 +1,5 @@
+# config au niveau du projet, s'applique à tous les contributeurs peu importe leur OS, contrairement à git config qui est locale à la machine
+
+* text=auto eol=lf
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
