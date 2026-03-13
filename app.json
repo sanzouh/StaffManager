@@ -27,6 +27,13 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "scheme": "staffmanager",
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
