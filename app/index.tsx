@@ -1,14 +1,19 @@
+import Avatar from "@/components/ui/Avatar";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import { Text, View } from "react-native";
 
 export default function Page() {
 	return (
-		<View className="flex-1 items-center p-6">
-			<View className="flex-1 justify-center max-w-screen-lg mx-auto">
-				<Text className="text-6xl font-bold">Hello !!!</Text>
-				<Text className="text-4xl text-[#38434D]">
-					This is the first page of your app.
-				</Text>
-			</View>
-		</View>
+		<>
+			<Badge observation="grand" />
+			<Avatar nom="Drago Malfoy" size={40} />
+			<Button
+				label="Se connecter"
+				onPress={() => {
+					console.log("Hello");
+				}}
+			/>
+		</>
 	);
 }
