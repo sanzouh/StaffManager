@@ -10,11 +10,3 @@ if (!supabaseUrl || !supabaseKey) {
 }
 
 export const supabase = createClient(supabaseUrl, supabaseKey);
-
-/* 	useEffect(() => {
-	async function test() {
-		const { data, error } = await supabase.from("employe").select("*");
-		console.log(data, error);
-	}
-	test();
-}, []); */
