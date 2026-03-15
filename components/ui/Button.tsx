@@ -1,4 +1,9 @@
-import { Text, ActivityIndicator, TouchableOpacity } from "react-native";
+import {
+	Text,
+	ActivityIndicator,
+	TouchableOpacity,
+	ViewStyle,
+} from "react-native";
 import { COLORS } from "@/constants/theme";
 
 const VARIANTS = {
@@ -15,6 +20,7 @@ type ButtonProps = {
 	loading?: boolean;
 	disabled?: boolean;
 	fullWidth?: boolean;
+	style?: ViewStyle;
 };
 
 export default function Button({
@@ -24,6 +30,7 @@ export default function Button({
 	loading = false,
 	disabled = false,
 	fullWidth = false,
+	style,
 }: ButtonProps) {
 	const config = VARIANTS[variant];
 
@@ -39,6 +46,7 @@ export default function Button({
 				borderColor: config.border ? COLORS.border : undefined,
 				alignSelf: fullWidth ? "stretch" : "flex-start",
 				opacity: disabled || loading ? 0.45 : 1,
+				...style,
 			}}
 		>
 			{loading ? (

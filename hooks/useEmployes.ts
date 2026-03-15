@@ -98,6 +98,13 @@ export const useEmployes = () => {
 		}));
 	}, [employes]);
 
+	const getById = useCallback(
+		(numemp: number): Employe | undefined => {
+			return employes.find((e) => e.numemp === numemp);
+		},
+		[employes],
+	);
+
 	return {
 		employes,
 		withObs,
@@ -108,5 +115,6 @@ export const useEmployes = () => {
 		updateEmploye,
 		removeEmploye,
 		stats,
+		getById,
 	};
 };
