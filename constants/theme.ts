@@ -59,3 +59,5 @@ export const SHADOW = {
 		elevation: 2,
 	},
 } as const;
+
+export const SALAIRE_MAX = 5000;
